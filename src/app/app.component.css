@@ -1,0 +1,461 @@
+
+
+.main {
+  overflow: hidden;
+  background-image: url("../assets/images/main_bg.png");
+  background-position: top center;
+}
+
+.header {
+  padding: 40px 0;
+}
+
+.header .container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.logo img {
+  vertical-align: bottom;
+}
+
+.menu {
+  margin-left: 191px;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+}
+
+.menu-item {
+  margin-right: 88px;
+}
+
+.menu-item a {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-item a:hover {
+  border-bottom: 2px solid white;
+}
+
+.currency {
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  padding: 6px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  line-height: 32px;
+  margin-left: auto;
+  user-select: none;
+}
+
+.main-content {
+  padding-top: 102px;
+  padding-bottom: 200px;
+}
+
+.main-content .container {
+  position: relative;
+}
+
+.main-info {
+  max-width: 608px;
+}
+
+.main-small-info {
+  background: #D3320F;
+  border-radius: 100px;
+  padding: 12px 16px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.main-title {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 120px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 56px;
+}
+
+.main-text {
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 56px;
+}
+
+.main-image {
+  position: absolute;
+  top: -123px;
+  left: calc(100% - 991px);
+}
+
+.why {
+  background-image: url("../assets/images/whybg.png");
+  background-position: top center;
+  background-size: initial;
+  padding-bottom: 180px;
+}
+
+.why-title {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 64px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.why-items {
+  margin-top: 60px;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(3, 312px);
+  justify-content: center;
+}
+
+.why-item {
+  text-align: center;
+}
+
+.why-item-title {
+  font-size: 24px;
+  line-height: 29px;
+  padding: 24px 0;
+}
+
+.why-item-text {
+  font-size: 16px;
+  line-height: 140%;
+}
+
+
+.products-title {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 64px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.products-cards {
+  height: 564px;
+  width: 1200px;
+  margin-top: 60px;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(3, 312px);
+  justify-content: center;
+  justify-items: center;
+}
+
+.products-cards-2 {
+  height: 564px;
+  width: 1200px;
+  margin-top: 24px;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(3, 312px);
+  justify-content: center;
+  justify-items: center;
+}
+
+.products-cards-3 {
+  height: 564px;
+  width: 1200px;
+  margin-top: 24px;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(3, 312px);
+  justify-content: center;
+  justify-items: center;
+}
+
+.products-cards-4 {
+  height: 564px;
+  width: 1200px;
+  margin-top: 24px;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(3, 312px);
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 180px;
+}
+
+.product-card {
+  background-image: url("../assets/images/Card-background.png");
+  background-size: initial;
+  background-position: center;
+  width: 384px;
+  height: 564px;
+}
+
+.product-inlay {
+  width: 324px;
+  height: 504px;
+  padding: 30px 30px;
+}
+
+.product-title {
+  font-size: 24px;
+  line-height: 29px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.product-text {
+  font-size: 16px;
+  line-height: 140%;
+  margin-bottom: 24px;
+}
+
+.inlay-orderbox {
+  width: fit-content;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 60px;
+}
+
+.price-weight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 8px;
+  width: 58px;
+  height: 66px;
+}
+
+.price-title {
+  font-family: 'Gilroy', 'sans-serif';
+  font-size: 32px;
+  line-height: 39px;
+  margin-top: 0;
+}
+
+.weight-title {
+  font-family: 'Gilroy', 'sans-serif';
+  font-size: 16px;
+  line-height: 18px;
+  color: #787878;
+}
+
+.inlay-button {
+  background: linear-gradient(95.61deg, #DA8023 0%, #E2B438 100%);
+  border-radius: 8px;
+  width: 182px;
+  height: 62px;
+  box-sizing: border-box;
+  padding: 19px 50px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  color: #191411;
+  margin-top: 0;
+}
+
+.inlay-button:hover {
+  background: linear-gradient(95.61deg, #AC6115 0%, #9E7A19 100%);
+}
+
+.inlay-cart {
+  width: 20px;
+  height: 20px;
+}
+
+.order-section {
+  overflow: hidden;
+  background-image: url("../assets/images/order_bg.png");
+  background-position: top center;
+  background-size: initial;
+}
+
+.order-section .container {
+}
+
+.order-section .container {
+  position: relative;
+}
+
+.order-title {
+  font-family: 'Merriweather', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+
+}
+
+.order_image {
+  position: absolute;
+  top: -30px;
+  left: calc(100% - 1400px);
+}
+
+.contain-orderbox {
+  display: grid;
+  justify-items: end;
+}
+
+.main-orderbox {
+  background-image: url("../assets/images/Фон карточки заказа.png");
+  background-size: initial;
+  width: 424px;
+  height: 555px;
+  margin-top: 24px;
+  margin-right: 0;
+  display: grid;
+  grid-template-rows: repeat(2, 185px);
+  justify-items: center;
+  gap: 0;
+}
+
+.order-text {
+  font-size: 24px;
+  line-height: 29px;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.order-form {
+  display: grid;
+  gap: 20px;
+  grid-template-rows: repeat(4, 65px);
+  justify-content: center;
+  width: 424px;
+  height: 555px;
+  margin-bottom: 20px;
+
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 344px;
+  height: 62px;
+  border: 0;
+  outline: none;
+  border-radius: 8px;
+  background: linear-gradient(95.61deg, #DA8023 0%, #E2B438 100%);
+  padding: 4px 4px;
+  position: relative;
+
+}
+
+.order-form input {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+  width: 320px;
+  height: 60px;
+  background: #211A16;
+  border: transparent;
+  border-radius: 8px;
+  position: relative;
+  left: 2px;
+  right: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  color: white;
+}
+
+.order-form input::placeholder {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  color: #757575;
+  text-indent: 10px;
+  position: absolute;
+  opacity: 0;
+}
+
+.holder {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  color: #757575;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(10px);
+  transition: all 2s ease;
+  pointer-events: none;
+}
+
+.order-form input:focus + .holder {
+  margin-top: -30px;
+  font-size: 12px;
+}
+
+.order-form input:not(:placeholder-shown) + .holder {
+  margin-top: -30px;
+  font-size: 12px;
+}
+
+.order-button {
+  background: linear-gradient(95.61deg, #DA8023 0%, #E2B438 100%);
+  border-radius: 8px;
+  width: 344px;
+  height: 62px;
+  box-sizing: border-box;
+  padding: 19px 50px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  color: #191411;
+  margin-top: 0;
+}
+
+.order-button:hover {
+  background: linear-gradient(95.61deg, #AC6115 0%, #9E7A19 100%);
+}
+
+.footer {
+  padding: 60px 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rights {
+  font-size: 16px;
+  line-height: 20px;
+}
