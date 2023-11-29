@@ -461,6 +461,12 @@
   background: linear-gradient(95.61deg, #AC6115 0%, #9E7A19 100%);
 }
 
+.order-button:disabled {
+  cursor: not-allowed;
+  color: gray;
+  background: #343434;
+}
+
 .footer {
   padding: 60px 0;
 }

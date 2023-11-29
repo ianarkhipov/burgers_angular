@@ -329,7 +329,7 @@
             </div>
             <label class="holder">Ваш телефон</label>
           </div>
-          <button class="order-button" id="order-action" (click)="confirmOrder()">Оформить заказ</button>
+          <button class="order-button" id="order-action" (click)="confirmOrder()" [disabled]="!form.valid">Оформить заказ</button>
         </div>
       </div>
     </div>
