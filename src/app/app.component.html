@@ -27,7 +27,7 @@
           </li>
         </ul>
       </nav>
-      <div class="currency" title="Изменить валюту" id="change-currency">$</div>
+      <div class="currency" title="Изменить валюту" id="change-currency" (click)="changeCurrency()">{{currency}}</div>
     </div>
   </header>
 </section>
@@ -84,214 +84,16 @@
   <div class="container">
     <H1 class="products-title">выберите свой бургер</H1>
     <div class="products-cards">
-      <div class="product-card">
+      <div class="product-card" *ngFor="let product of productsData">
         <div class="product-inlay">
-          <img src="./assets/images/burger 1 3.png" alt="Chedder-bacon" class="product-image"/>
-          <div class="product-title">Бургер чеддер & бекон</div>
-          <div class="product-text">Котлета из говядины криспи, булочка, томат, сыр Чеддер, грудинка, лук
-            красный,
-            салат айсбер, майонез, кетчуп, сырный соус
+          <img src="./assets/images/{{product.image}}" alt="burger" class="product-image"/>
+          <div class="product-title">{{product.title}}</div>
+          <div class="product-text">{{product.text}}
           </div>
           <div class="inlay-orderbox">
             <div class="price-weight">
-              <div class="price-title" data-base-price="8">8 $</div>
-              <div class="weight-title">360 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/burger 10 1.png" alt="BBQchicbacon" class="product-image"/>
-          <div class="product-title">BBQ с беконом и курицей</div>
-          <div class="product-text">Булочка бриошь с кунжутом, куриная котлета, сыр чеддер, томат, огурец
-            маринованный, лук маринованный, салат Ромен, бекон, соус BBQ
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="7">7 $</div>
-              <div class="weight-title">390 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/burger 12 1.png" alt="Doublebeef" class="product-image"/>
-          <div class="product-title">Дабл биф бургер</div>
-          <div class="product-text">Две говяжьи котлеты, сыр чеддер, салат романо, маринованные огурцы, свежий
-            томат, бекон, красный лук, соус бургер, горчица
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="10">10 $</div>
-              <div class="weight-title">420 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="products-cards-2">
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/burger 9 1.png" alt="Bavarian" class="product-image"/>
-          <div class="product-title">Баварский бургер</div>
-          <div class="product-text">Булочка для бургера, говяжья котлета, красный лук, сыр, охотничья
-            колбаска, соус барбекю, соус сырный, салат айсберг
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="7">7 $</div>
-              <div class="weight-title">220 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/burger 6 1.png" alt="Cheeseburger" class="product-image"/>
-          <div class="product-title">Бекон чизбургер</div>
-          <div class="product-text">Булочка для бургера, говяжья котлета, грудинка, помидор, огурец
-            маринованный, сыр, сырный соус, кетчуп, зелень
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="8">8 $</div>
-              <div class="weight-title">220 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/burger 3 1.png" alt="Indiana" class="product-image"/>
-          <div class="product-title">Индиана бургер</div>
-          <div class="product-text">Булочка для бургера, котлета куриная, грудинка, яйцо, огурец маринованный,
-            криспи лук, кетчуп, соус сырный, горчица, зелень
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="9">9 $</div>
-              <div class="weight-title">320 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="products-cards-3">
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/7.png" alt="Weggie" class="product-image"/>
-          <div class="product-title">Вегги бургер</div>
-          <div class="product-text">Булочка для бургера, вегетарианская котлета, красный лук, сыр, свежий
-            томат, соус барбекю, соус сырный, салат айсберг
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="8">8 $</div>
-              <div class="weight-title">280 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/8.png" alt="WheepinJoe" class="product-image"/>
-          <div class="product-title">Плаксивый Джо</div>
-          <div class="product-text">Булочка для бургера, говяжья котлета, грудинка, помидор, огурец
-            маринованный, красный лук, сыр, перец халапеньо, кетчуп, зелень
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="7">7 $</div>
-              <div class="weight-title">380 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/9.png" alt="DoubleCheeseB" class="product-image"/>
-          <div class="product-title">Двойной чиз бургер</div>
-          <div class="product-text">Булочка для бургера, две говяжьи котлеты, двойной сыр чеддар, огурец
-            маринованный, криспи лук, кетчуп, соус сырный, горчица, зелень
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="11">11 $</div>
-              <div class="weight-title">400 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="products-cards-4">
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/10.png" alt="Fresh" class="product-image"/>
-          <div class="product-title">Фрешбургер</div>
-          <div class="product-text">Булочка для бургера, говяжья котлета, бекон, сыр чеддар, яйцо, салями,
-            соус барбекю, соус сырный, салат айсберг, свежий томат
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="9">9 $</div>
-              <div class="weight-title">300 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/11.png" alt="Tsukkini" class="product-image"/>
-          <div class="product-title">Цуккини бургер</div>
-          <div class="product-text">Булочка для бургера, вегетарианская котлета из нута, цуккини на гриле,
-            помидор, огурец маринованный, сыр, горчичный соус, кетчуп, зелень
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="8">8 $</div>
-              <div class="weight-title">320 гр</div>
-            </div>
-            <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
-                                                       class="inlay-cart"/></button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-inlay">
-          <img src="./assets/images/12.png" alt="DoubleCheddar" class="product-image"/>
-          <div class="product-title">Двойной бургер чеддар</div>
-          <div class="product-text">Булочка для бургера, котлета говяжья, грудинка, красный лук, огурец
-            маринованный, томат, кетчуп, двойной сыр чеддар, горчица, зелень
-          </div>
-          <div class="inlay-orderbox">
-            <div class="price-weight">
-              <div class="price-title" data-base-price="9">9 $</div>
-              <div class="weight-title">360 гр</div>
+              <div class="price-title">{{product.price}} {{currency}}</div>
+              <div class="weight-title">{{product.grams}} гр</div>
             </div>
             <button class="inlay-button" (click)="scrollTo(order)">Заказать <img src="./assets/images/Vector.png" alt="cart"
                                                        class="inlay-cart"/></button>

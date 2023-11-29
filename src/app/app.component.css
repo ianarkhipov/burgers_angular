@@ -150,11 +150,13 @@
 }
 
 .products-cards {
-  height: 564px;
+  /*height: 564px;*/
   width: 1200px;
   margin-top: 60px;
+  margin-bottom: 60px;
   display: grid;
   gap: 100px;
+  grid-row-gap: 24px;
   grid-template-columns: repeat(3, 312px);
   justify-content: center;
   justify-items: center;
