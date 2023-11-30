@@ -224,7 +224,7 @@
 }
 
 .inlay-orderbox {
-  width: fit-content;
+  width: 324px;
   height: 65px;
   display: flex;
   flex-direction: row;
@@ -246,9 +246,10 @@
 
 .price-title {
   font-family: 'Gilroy', 'sans-serif';
-  font-size: 32px;
+  font-size: 26px;
   line-height: 39px;
   margin-top: 0;
+  white-space: nowrap;
 }
 
 .weight-title {
