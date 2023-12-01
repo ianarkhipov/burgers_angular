@@ -1,7 +1,9 @@
-import {Component,} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators,} from "@angular/forms";
 import {ReactiveFormsModule} from '@angular/forms';
-import {CommonModule} from "@angular/common";
+import {CommonModule} from '@angular/common';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,8 @@ import {CommonModule} from "@angular/common";
 })
 
 
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   currency = '$';
 
   form = this.fb.group({
@@ -120,10 +123,17 @@ export class AppComponent {
     },
   ];
 
-  constructor(private fb: FormBuilder) {
+  isSmallScreen: boolean = false;
 
+  constructor(private fb: FormBuilder, public breakpointObserver: BreakpointObserver) {
+    this.isSmallScreen = false;
   }
 
+  ngOnInit() {
+    this.breakpointObserver.observe([Breakpoints.Small]).subscribe(result => {
+      this.isSmallScreen = result.matches;
+    });
+  }
 
   scrollTo(target: HTMLElement) {
     target.scrollIntoView({behavior: "smooth"});
