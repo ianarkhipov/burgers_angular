@@ -135,6 +135,7 @@ export class AppComponent implements OnInit {
     });
   }
 
+
   scrollTo(target: HTMLElement) {
     target.scrollIntoView({behavior: "smooth"});
   }
