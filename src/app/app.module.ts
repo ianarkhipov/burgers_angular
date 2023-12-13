@@ -1,14 +1,20 @@
-import {CommonModule, NgFor} from "@angular/common";
+import {CommonModule } from "@angular/common";
 import { AppComponent } from "./app.component";
 import { NgModule } from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {ReactiveFormsModule} from "@angular/forms";
-import {LayoutModule} from "@angular/cdk/layout";
+import {HttpClientModule} from "@angular/common/http";
+import {AppService} from "./app.service";
 
 @NgModule({
-  declarations: [AppComponent, NgFor],
-  imports: [CommonModule, BrowserModule, ReactiveFormsModule, LayoutModule],
-  providers: [],
+  declarations: [
+    AppComponent
+  ],
+  imports: [CommonModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule],
+  providers: [AppService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

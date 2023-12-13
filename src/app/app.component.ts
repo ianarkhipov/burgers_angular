@@ -1,9 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component,} from '@angular/core';
 import {FormBuilder, Validators,} from "@angular/forms";
 import {ReactiveFormsModule} from '@angular/forms';
-import {CommonModule} from '@angular/common';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-
+import {CommonModule} from "@angular/common";
+import {AppService} from "./app.service";
 
 @Component({
   selector: 'app-root',
@@ -14,8 +13,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 
 
-export class AppComponent implements OnInit {
-
+export class AppComponent {
   currency = '$';
 
   form = this.fb.group({
@@ -123,16 +121,8 @@ export class AppComponent implements OnInit {
     },
   ];
 
-  isSmallScreen: boolean = false;
+  constructor(private fb: FormBuilder, private appService: AppService) {
 
-  constructor(private fb: FormBuilder, public breakpointObserver: BreakpointObserver) {
-    this.isSmallScreen = false;
-  }
-
-  ngOnInit() {
-    this.breakpointObserver.observe([Breakpoints.Small]).subscribe(result => {
-      this.isSmallScreen = result.matches;
-    });
   }
 
 
@@ -142,8 +132,18 @@ export class AppComponent implements OnInit {
 
   confirmOrder() {
     if (this.form.valid) {
-      alert("Спасибо за заказ! Мы скоро свяжемся с вами.")
-      this.form.reset();
+      this.appService.sendOrder(this.form.value)
+        .subscribe(
+          {
+            next: (response: any) => {
+              alert(response.message)
+              this.form.reset();
+            },
+            error: (response) => {
+              alert(response.error.message);
+            },
+          }
+        );
     }
   }
 
@@ -160,7 +160,7 @@ export class AppComponent implements OnInit {
     }
     this.currency = newCurrency;
 
-    this.productsData.forEach((item:any) => {
+    this.productsData.forEach((item: any) => {
       item.price = +(item.basePrice * coefficient).toFixed(1);
     })
   }
