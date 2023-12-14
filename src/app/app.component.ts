@@ -126,7 +126,7 @@ export class AppComponent {
   }
 
 
-  scrollTo(target: HTMLElement) {
+  scrollTo(target: HTMLElement ) {
     target.scrollIntoView({behavior: "smooth"});
   }
 
