@@ -5,8 +5,6 @@ import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {ReactiveFormsModule} from "@angular/forms";
 import {AppService} from "./app.service";
-import {provideRouter} from "@angular/router";
-import {routes} from "./app.routes";
 import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
@@ -17,7 +15,7 @@ import { provideHttpClient } from '@angular/common/http';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule],
-  providers: [AppService, provideRouter(routes), provideHttpClient()],
+  providers: [AppService, provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {
