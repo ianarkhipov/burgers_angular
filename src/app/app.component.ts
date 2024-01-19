@@ -3,6 +3,7 @@ import {FormBuilder, Validators,} from "@angular/forms";
 import {ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from "@angular/common";
 import {AppService} from "./app.service";
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @Component({
@@ -13,6 +14,7 @@ import {AppService} from "./app.service";
   imports: [ReactiveFormsModule, CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
+
 
 
 export class AppComponent {
